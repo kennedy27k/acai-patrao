@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Açaí do Patrão</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background-color: #fff0f5;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #8b008b;
+    }
+    #buttons {
+      position: relative;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    #sim {
+      background-color: #32cd32;
+      color: white;
+    }
+    #nao {
+      background-color: #ff4500;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>O patrão deve pagar um açaí. Sim ou Não?</h1>
+  <div id="buttons">
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+  </div>
+
+  <script>
+    const naoBtn = document.getElementById('nao');
+    naoBtn.addEventListener('mouseover', () => {
+      const x = Math.floor(Math.random() * window.innerWidth - 100);
+      const y = Math.floor(Math.random() * window.innerHeight - 100);
+      naoBtn.style.left = x + 'px';
+      naoBtn.style.top = y + 'px';
+    });
+
+    document.getElementById('sim').addEventListener('click', () => {
+      alert("Então já separa o dinheiro, patrão 😎🍧");
+    });
+  </script>
+</body>
+</html>
